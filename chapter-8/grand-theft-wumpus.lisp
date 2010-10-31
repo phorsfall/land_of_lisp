@@ -1,4 +1,4 @@
-(load "chapter7.lisp")
+(load "chapter-7/graph-util.lisp")
 
 (defparameter *congestion-city-nodes* nil)
 (defparameter *congestion-city-edges* nil)
