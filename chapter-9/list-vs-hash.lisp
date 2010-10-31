@@ -1,4 +1,4 @@
-(load "chapter8.lisp")
+(load "chapter-8/grand-theft-wumpus.lisp")
 
 (setf *edge-num* 1000)
 (setf *node-num* 1000)
