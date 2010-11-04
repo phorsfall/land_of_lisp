@@ -108,6 +108,14 @@
                (when (and (not (eq player nplayer)) (> ndice dice))
                  (return t))))))
 
+(defun rate-position (tree player)
+  (let ((moves (caddr tree)))
+    (if (not (lazy-null moves))
+	(apply (if (eq (car tree) player)
+		   #'max
+		 #'min)
+	       (get-ratings tree player))
+      (score-board (cadr tree) player))))
 
 
 (defun ab-get-ratings-max (tree player upper-limit lower-limit)
